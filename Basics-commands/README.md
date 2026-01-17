@@ -123,3 +123,236 @@ Tail -f file.txt  => whenever any new line added in the file it will show on the
  whereas less is advanced pages it can go forward and backward .
 
 
+
+11.   --------->   Cp   <---------- 
+=> cp is use to copy the files and directories. cp source destination 
+
+File copy
+=> cp file1.txt    file2.txt
+
+B.  Copy file into directories 
+=>. cp file.txt  destination 
+
+c.  Multiple files in one directory
+=> cp    f1    f2    f3     newfolder
+
+D. Directory copy  (-r required)
+=>  cp    -r   A1    newfolder
+Option	Use
+-r	Directory copy
+-i	Confirm overwrite
+-f	Force overwrite
+-p	Preserve attributes
+-v	Show progress
+-u	Update only
+
+<img width="1684" height="1236" alt="image" src="https://github.com/user-attachments/assets/5f1ae9d0-e256-4e06-ba59-67375f9ccde7" />
+
+
+
+
+12.   --------->  Mv    <---------- 
+=> mv is use to move the files or directories and to rename it .
+
+Basic Syntax.  => mv source destination
+
+  File rename  => mv file1.txt file2.txt
+  Move File Into Directory  =>  mv file.txt newfolder
+  Directory move  => mv  dir1  dir2
+
+  <img width="1684" height="1012" alt="image" src="https://github.com/user-attachments/assets/f2fa8594-411e-4b43-bee2-70e329eea9d7" />
+
+
+
+
+13 .    --------->  Wc   <----------
+=> It is use to count the lines words and characters of file.
+Basic Syntax      =>    wc    file.txt
+Output format	    =>      lines  words  characters  filename
+A.   Lines count 		=>	 wc -l file.txt
+B.   Word count 		=>	 wc -w file.txt
+C.   Character count 	=>	 wc -m file.txt
+D.   Bytes count 		=>	 wc -c file.txt
+E.   With pipe 		=>     ls | wc -l
+
+<img width="1684" height="616" alt="image" src="https://github.com/user-attachments/assets/831564e5-a59d-40ae-be83-0356511db521" />
+
+
+
+
+
+14.   --------->   Vi editor in unix and Linux operating system   <----------
+ => Its a terminal based text editor which creates or edit the files  
+
+
+
+
+
+
+15.   --------->   ln ( hard link and soft link )   <----------
+=> it is use to create links (shortcuts)
+
+Hard link 
+=> share the same index node 
+ .   it is safe even after the deletion of original files.
+ .   not for directory normally 
+ .   not for different file system
+
+Basic syntax   =>   ln   		original.txt     hardlink.txt
+Proof               =>   ls   -li 	original.txt    hardlink.txt
+
+
+Soft link
+=> Different index node 
+.    Not safe after the deletion of original files.
+.    Allowed for directory
+	
+Basic syntax   =>  ln -s original.txt softlink.txt
+Proof               =>  ls -l softlink.txt
+
+<img width="1684" height="1006" alt="image" src="https://github.com/user-attachments/assets/3d50e782-d57b-4ff0-94d6-8f2f745d5107" />
+
+
+
+
+
+16.   --------->  cut    <----------
+=> It is use to engrave the  column / character out of the specific output or files.
+
+. cut command delimiter ke basis par file se specific fields ya fixed position characters extract karti hai.
+
+file.txt =>    Ansh:21:Delhi    Ravi:22:Mumbai     Neha:20:Pune
+
+   Single field nikalna (-d + -f)
+=>     cut -d ":" -f 1 data.txt
+
+Output :    Ansh Ravi Neha
+
+
+B.     Multiple fields nikalna
+=>    cut -d ":" -f 1,3 data.txt
+
+Output :  Ansh:Delhi   Ravi:Mumbai   Neha:Pune
+C.     Character-wise cut (-c)
+=>	 cut -c 1-4 name.txt
+
+Output :   Ansh		Ravi
+
+<img width="1684" height="1006" alt="image" src="https://github.com/user-attachments/assets/900e16fa-f196-4d41-8160-c28c0a5a4910" />
+
+
+
+
+17.    --------->   Tee    <---------- 
+=>	it  show the output in terminal and save it in the file
+
+ Simple output save + display
+=>  ls | tee files.txt
+
+Output  terminal  => A1 backup1.txt 	file4.txt 	newfolder
+Output  files.txt   => A1 backup1.txt 	file4.txt 	newfolder
+
+B.  Append mode (-a)
+=>  date | tee -a time.log
+
+Output  terminal  => Tue Jan 16 22:45:10 IST 2026
+Output  time.log  => Tue Jan 16 22:45:10 IST 2026
+
+
+<img width="1684" height="1340" alt="image" src="https://github.com/user-attachments/assets/d5f9d3ff-50fd-4bc7-8d6f-600b3295ec92" />
+
+
+
+
+
+
+18.   --------->   Sort    <---------- 
+=> It sort the text line by line (Default: alphabetical order, ascending)
+
+Names.txt
+Ravi
+Ansh
+Neha
+Kunal
+
+A. Simple sort (alphabetical)
+=>   sort names.txt
+output
+Ansh
+Kunal
+Neha
+Ravi
+
+B. Reverse sort (-r)
+=> sort -r names.txt
+
+output
+Ravi
+Neha
+Kunal
+Ansh
+
+C. Numeric sort (-n) 
+=> sort -n marks.txt
+
+D. Sort + unique (-u)
+=> sort -u city.txt
+
+E. Sort by specific column (-k)
+=> sort -k3 -n students.txt
+
+
+<img width="1684" height="1274" alt="image" src="https://github.com/user-attachments/assets/2b5fb6c4-c95b-4a46-b281-8ab1139b9ff0" />
+
+
+
+
+
+ 19.    --------->   Clear    <---------- 
+=> it is use to clear the terminal 
+
+20. Diff 
+=> it helps to identify the difference between two files and directory
+
+Diff   f1.txt  f2.txt   => normal difference 
+Diff -y f1.txt f2.txt => will show the diff with side view 
+
+
+
+<img width="1684" height="1378" alt="image" src="https://github.com/user-attachments/assets/23adb79a-91b3-4186-baec-e560dd678277" />
+
+
+*Login related commands 
+Ssh
+
+=>   SSH (Secure Shell) is a command used to securely connect to a remote computer/server over a network.
+
+*Disk usage 
+Df => show the used and free space of disk 
+Du => it tell about the size of files/directories
+
+
+
+<img width="1684" height="1676" alt="image" src="https://github.com/user-attachments/assets/f3695e99-44fb-41ec-8e0c-ebb944f5ccaa" />
+
+*process
+Ps        => Shows currently running processes.
+Top      => Shows real-time running processes + CPU &          memory usage.
+
+Fuser   => Shows which process is using a file, directory, or   port. 
+
+Kill       => Stops a running process using PID.
+nohup => Runs a command in background even after logout.
+
+Free         =>  Shows memory (RAM + swap) usage.
+Vmstat     =>  Shows memory, CPU, processes, I/O stats.
+
+
+
+
+
+
+
+
+
+
