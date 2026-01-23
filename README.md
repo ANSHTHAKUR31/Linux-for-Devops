@@ -1,13 +1,13 @@
-  ALL ABOUT 	LINUX
+#  ALL ABOUT 	LINUX
 
-Linux is an open source operating system  and it came from the unix family which is a commercialised operating system.
+* Linux is an open source operating system  and it came from the unix family which is a commercialised operating system.
 
-In Linux everything is represented as a file including a hardware program, the files are stored in a directory, and every directory contains a file with a tree structure. That is called (File System Hierarchy).
+* In Linux everything is represented as a file including a hardware program, the files are stored in a directory, and every directory contains a file with a tree structure. That is called (File System Hierarchy).
 
 
-Linux uses single rooted , inverted tree like structure .
+* Linux uses single rooted , inverted tree like structure .
 
-Root Directory represents with / (forward slash) It is a top-level directory in Linux.
+* Root Directory represents with / (forward slash) It is a top-level directory in Linux.
 
 
 
@@ -15,6 +15,7 @@ Root Directory represents with / (forward slash) It is a top-level directory in 
 
 <img width="1130" height="780" alt="image" src="https://github.com/user-attachments/assets/8e51f907-0c08-4d0f-8cc6-67fc021fd8c8" />
 
+## File System Hierarchy
 
 <img width="1882" height="766" alt="image" src="https://github.com/user-attachments/assets/762ed53c-11db-42b6-a223-9cbc89cb39bf" />
 
@@ -26,86 +27,88 @@ Root Directory represents with / (forward slash) It is a top-level directory in 
 
 
 
-1.   /
+##   1. /
 
-The base of the Linux directory is the root. This is the starting point of FSH. Every directory arises from the root directory. It is represented by a forward slash (/). 
-
-
-
-
-2.   /root → 
-
-It is the home directory for the root user which is also known as (Superuser).
+* The base of the Linux directory is the root. This is the starting point of FSH.
+*  Every directory arises from the root directory. It is represented by a forward slash (/). 
 
 
 
 
+##   2. /root → 
 
-3.  /bin → User Binaries
-
-Contains binary executable. 
-
-Common Linux commands you need to use in single-user modes are located under this directory. 
-
-Commands used by all the users of the system are located here.
-
-/bin = User BinariesBasic commands ka ghar 
-
-Yahin par common commands milti hain jaise:
-ls – files/directory list karne ke liye
-cd – directory change karne ke liye
-mkdir – new directory banane ke liye
-cp – copy
-mv – move / rename
-rm – delete
-cat, echo, pwd etc.
+* It is the home directory for the root user which is also known as (Superuser).
 
 
 
 
 
+##   3. /bin → User Binaries
 
-4.   /sbin → System Binaries
+* Contains binary executable. 
 
-SystemBinaries Just like /bin, /sbin also contains binary executables.
+* Common Linux commands you need to use in single-user modes are located under this directory. 
 
- But, the linux commands located under this directory are used typically by system aministrator, for system maintenance purpose. 
+* Commands used by all the users of the system are located here.
 
- For example: iptables, reboot, fdisk, ifconfig, swapon
+* /bin = User BinariesBasic commands ka ghar 
+
+* Here, you will find common Linux commands such as:
+   -  ls        =>    used to list files and directories
+   -  cd        =>    used to change the current directory
+   -  mkdir     =>    used to create a new directory
+   -  cp        =>    used to copy files or directories
+   - mv         =>    used to move or rename files
+   - rm         =>    used to delete files or directories
+     
+   - cat, echo, pwd, etc   => used for viewing file content, displaying text, and showing the current working directory
+
+
+
+
+
+
+##  4. /sbin → System Binaries
+
+* SystemBinaries Just like /bin, /sbin also contains binary executables.
+
+* But, the linux commands located under this directory are used typically by system aministrator, for system maintenance purpose. 
+
+-  For example: iptables, reboot, fdisk, ifconfig, swapon
 
 
 
 
 
  
-5.   /dev → Device files
-/dev directory contains special files that represent hardware and virtual devices attached to the system.
+##   5. /dev → Device files
+* /dev directory contains special files that represent hardware and virtual devices attached to the system.
 
-Device Files it contains hardware device files, Contains device files.
+* Device Files it contains hardware device files, Contains device files.
 
-/dev directory me hardware devices ko represent karne wali special files hoti hain.
+* /dev directory me hardware devices ko represent karne wali special files hoti hain.
 
-Linux me har hardware ko ek file ki tarah treat kiya jata hai, aur wo files /dev ke andar hoti hain.
+* Linux me har hardware ko ek file ki tarah treat kiya jata hai, aur wo files /dev ke andar hoti hain.
 
- These include terminal devices, usb, or any device attached to the system. For example: /dev/tty1, /dev/usbmon0
+*  These include terminal devices, usb, or any device attached to the system. For example: /dev/tty1, /dev/usbmon0
 
-/dev me kya hota hai?
-Terminal devices
+* /dev me kya hota hai?
+  - Terminal devices
 /dev/tty1
 /dev/tty2
 
-USB devices
+  - USB devices
 /dev/usbmon0
 
-Hard disks / partitions
+  - Hard disks / partitions
 /dev/sda
 /dev/sda1
 
-Input devices
+  - Input devices
 /dev/mouse
 /dev/input/*
 
-Virtual devices
+  - Virtual devices
 /dev/null
 /dev/zero
 /dev/random
@@ -115,176 +118,226 @@ Virtual devices
 
 
 
-6.   /var→ Variable Files
+##   6. /var→ Variable Files
    
-The variable data files such as log files are located in the /var directory. 
+* The variable data files such as log files are located in the /var directory. 
 
-File contents that tend to grow are located in this directory. 
+* File contents that tend to grow are located in this directory. 
 
-/var contains variable data files such as logs, mail, temporary files, and application data whose size grows over time.
+* /var contains variable data files such as logs, mail, temporary files, and application data whose size grows over time.
 
-/var/log: System log files generated by OS and other applications.
+* /var/log: System log files generated by OS and other applications.
 
- /var/lib: Contains database and package files. 
- /var/mail: Contains Emails. 
- /var/tmp: Contains Temporary files needed for reboot.
+  -  /var/lib: Contains database and package files. 
+  -  /var/mail: Contains Emails. 
+  -  /var/tmp: Contains Temporary files needed for reboot.
 
 
 
 
  
-7.   /mnt → Mount Directory
-This directory is used to mount a file system temporarily.
+##   7. /mnt → Mount Directory
+* This directory is used to mount a file system temporarily.
 
-/mnt directory ka use temporarily file systems mount karne ke liye hota hai.
+* /mnt directory ka use temporarily file systems mount karne ke liye hota hai.
 
-ab hum koi external storage ya alag filesystem (USB, CD-ROM, network drive) ko short time ke liye access karna chahte hain, to use /mnt ke andar mount kar dete hain.
+* ab hum koi external storage ya alag filesystem (USB, CD-ROM, network drive) ko short time ke liye access karna chahte hain, to use /mnt ke andar mount kar dete hain.
 
 Common uses
 
-USB drive
-External hard disk
-ISO image
-Network filesystem (NFS)
+  - USB drive
+  - External hard disk
+  - ISO image
+  - Network filesystem (NFS)
 
     Example : mount /dev/sdb1 /mnt
     
-Temporary mount ke liye hota hai
+* Temporary mount ke liye hota hai
 
-Mostly manual mounts ke liye use hota hai
+* Mostly manual mounts ke liye use hota hai
 
-System boot ke time automatically mount karne ke liye usually /mnt use nahi hota
-
-
-
-
-8.   /media→ Removable Media Devices or Removable Media Mount Points
-The /media directory contains subdirectories where removable media devices inserted into the computer are mounted.
-USB pen drive
-External hard disk
-CD/DVD
-computer me insert karte ho, to system unhe automatically /media ke andar mount kar deta hai.
-
-
-/mnt	                /media
-Manual          temporary mount	Auto mount
-Admin use  	   Desktop environment
-Short-term	    USB/CD auto-detect
+* System boot ke time automatically mount karne ke liye usually /mnt use nahi hota
 
 
 
 
-9.   /usr→ Unix System Resources
+##  8. /media→ Removable Media Devices or Removable Media Mount Points
+* The /media directory contains subdirectories where removable media devices inserted into the computer are mounted.
+  - USB pen drive
+  - External hard disk
+  - CD/DVD
+*  computer me insert karte ho, to system unhe automatically /media ke andar mount kar deta hai.
+
+
+### Difference between /mnt and /media
+
+| Feature        | /mnt                          | /media                         |
+|---------------|-------------------------------|--------------------------------|
+| Mount Type    | Manual temporary mount        | Automatic mount                |
+| Usage         | Admin / system use            | Desktop environment            |
+| Duration      | Short-term                    | Usually long-term (while device is connected) |
+| Devices       | Manually mounted devices      | USB, CD/DVD auto-detected      |
+
+
+
+
+
+##   9. /usr→ Unix System Resources
     
-The /usr directory contains applications and files used by users, as opposed to applications and files used by the system.
+* The /usr directory contains applications and files used by users, as opposed to applications and files used by the system.
 
-/usr contains user applications, binaries, libraries, and shared data used by users rather than the core system.
+* /usr contains user applications, binaries, libraries, and shared data used by users rather than the core system.
 
-/usr directory me user-level applications, commands aur libraries hoti hain.
+* /usr directory me user-level applications, commands aur libraries hoti hain.
 
-Ye normal users ke programs hote hain, system boot karne ke liye essential nahi hote (unlike /bin).
+* Ye normal users ke programs hote hain, system boot karne ke liye essential nahi hote (unlike /bin).
 
-/usr ke common subdirectories
 
-🔹 /usr/bin
-Most user commands Examples:
+## /usr Directory Overview
+
+### 🔹 /usr/bin
+- Contains most user-level commands  
+- Common programs used by all users  
+
+**Examples:**
 gcc
 git
 python
 vim
 
-🔹 /usr/sbin
-Admin/system commands (non-essential for boot) Examples:
+
+### 🔹 /usr/sbin
+- Administrative and system commands  
+- Not essential for system boot  
+
+**Examples:**
 apachectl
 useradd
 
-🔹 /usr/lib
-Libraries used by /usr/bin programs
+### 🔹 /usr/lib
+- Libraries used by programs in `/usr/bin` and `/usr/sbin`
 
-🔹 /usr/share
-Architecture-independent data (man pages, icons, documentation)
-/bin = basic survival tools 
-/usr = full-featured user programs
-/bin vs /usr/bin (quick clarity)
+### 🔹 /usr/share
+- Architecture-independent data  
+- Includes manuals, icons, and documentation  
+
+---
+
+## /bin vs /usr/bin (Quick Comparison)
+
+| Directory   | Purpose |
+|------------|---------|
+| `/bin`     | Basic survival tools required for boot and recovery |
+| `/usr/bin` | Full-featured user programs |
+
+**Summary:**
+- `/bin` → Essential minimal commands  
+- `/usr` → Extended user applications  
 
 
-   /bin	                               /usr/bin
-Essential commands	           Non-essential user apps
-Single-user mode	             Normal multi-user mode
-Boot ke liye required	        Boot ke baad mounted
 
 
+## /bin vs /usr/bin
 
-
-
-
-10.   /etc → Configuration files or Editable Text Configuration
-
-It contains all configuration files of server .
-
-The core configuration files are stored in the /etc directory.
-
-It controls the behavior of an operating system or application.
-
-This directory also contains startup and shutdown program scripts that are used to start or stop individual programs.
-
- Core configuration files
-OS aur services ki main settings Examples:
-/etc/passwd
-/etc/shadow
-/etc/hostname
-/etc/fstab
-/etc/resolv.conf
-
-Application / server config files
-Web server, DB, SSH, etc. Examples:
-/etc/nginx/nginx.conf
-/etc/apache2/
-/etc/ssh/sshd_config
-
-Yahan binary files nahi, mostly text files hote hain , Admin (root) hi usually edit karta hai , Galat change → system ya service crash ho sakti hai ⚠️
+| Feature            | /bin                          | /usr/bin                     |
+|-------------------|-------------------------------|------------------------------|
+| Command Type      | Essential commands            | Non-essential user programs  |
+| Mode              | Single-user mode              | Normal multi-user mode       |
+| Boot Requirement  | Required during system boot   | Mounted after boot           |
 
 
 
 
 
 
-11.   /boot → Boot Loader Files or system ka  starting point
 
-The /boot directory contains the files needed to boot the system ,  the GRUB boot loader's files and your Linux kernels are stored here.
+##    10. /etc → Configuration files or Editable Text Configuration
 
-/boot me kya hota hai?
-🔹 Linux Kernel files
-vmlinuz-*
-Actual kernel image
+* It contains all configuration files of server .
 
-🔹 Initial RAM Disk
-initrd.img-*
-initramfs-* ➡ Boot ke time temporary filesystem provide karta hai
+*  The core configuration files are stored in the /etc directory.
 
-🔹 Boot loader files
-GRUB related files Examples:
-/boot/grub/
-/boot/grub/grub.cfg
-/boot ka data critical hota hai  , Galti se delete / corrupt → system boot nahi hoga ⚠️ , Often alag boot partition hota hai.
-/boot contains boot loader files, Linux kernel images, and initial RAM disk files required to boot the system.
+*  It controls the behavior of an operating system or application.
 
+*  This directory also contains startup and shutdown program scripts that are used to start or stop individual programs.
 
+### Core Configuration Files
+- Main configuration settings for the OS and system services  
 
+**Examples:**
+-  /etc/passwd
+-  /etc/shadow
+-  /etc/hostname
+-  /etc/fstab
+-  /etc/resolv.conf
 
 
+### Application / Server Configuration Files
+- Configuration files for web servers, databases, SSH, etc.
 
-12.   /opt → Optional Applications
+**Examples:**
 
-The opt directory is used for installing the application software from thirdparty vendors that are not available in the Linux distribution.
-
-Usually, the software code is stored in the opt directory and the binary code is linked to the bin directory so that all users can run that software.
-
-Ye software usually self-contained hota hai (apni libraries, configs, etc. ke saath).
+-  /etc/nginx/nginx.conf
+-  /etc/apache2/
+-  /etc/ssh/sshd_config
 
 
+⚠️ **Important Note:**
+- `/etc` mostly contains text-based configuration files, not binary files
+- Usually edited only by the system administrator (root)
+- Incorrect changes can cause system or service failures
 
-/opt/								
+
+
+
+
+
+
+##   11. /boot → Boot Loader Files or system ka  starting point
+
+* The /boot directory contains the files needed to boot the system ,  the GRUB boot loader's files and your Linux kernels are stored here.
+
+### /boot me kya hota hai?
+##### Linux Kernel files
+ - vmlinuz-*
+ - Actual kernel image
+
+##### Initial RAM Disk
+ -  initrd.img-*
+ -  initramfs-* ➡ Boot ke time temporary filesystem provide karta hai
+
+##### Boot loader files
+* GRUB related files Examples:
+  - /boot/grub/
+  - /boot/grub/grub.cfg
+  - /boot ka data critical hota hai  , Galti se delete / corrupt → system boot nahi hoga ⚠️ , Often alag boot partition hota hai.
+  - /boot contains boot loader files, Linux kernel images, and initial RAM disk files required to boot the system.
+
+
+
+
+
+
+##   12. /opt → Optional Applications
+
+* The opt directory is used for installing the application software from thirdparty vendors that are not available in the Linux distribution.
+
+* Usually, the software code is stored in the opt directory and the binary code is linked to the bin directory so that all users can run that software.
+
+* Ye software usually self-contained hota hai (apni libraries, configs, etc. ke saath).
+
+
+###### /opt → Optional Application Software
+
+  - Used to store optional or third-party software
+  - Applications installed here are usually not part of the default OS
+  - Each application is kept in its own directory
+  - Keeps third-party software isolated from system directories
+
+###### Typical Directory Structure
+
+
+```sh /opt/								
  └── software_name/
      ├── bin/
      ├── lib/
@@ -293,48 +346,52 @@ Ye software usually self-contained hota hai (apni libraries, configs, etc. ke sa
 /opt/google/chrome
 /opt/oracle
 /opt/zoom
+```
 
-Binaries ka use kaise hota hai?
-Software ka binary /opt/software/bin me hota hai
-Uska link bana diya jata hai ,  /usr/bin/software_name
+  - Binaries ka use kaise hota hai?
+  - Software ka binary /opt/software/bin me hota hai
+  - Uska link bana diya jata hai ,  /usr/bin/software_name
 
 
 
 
-13.   /home → Home Directory
+##   13. /home → Home Directory
 
-It contains secondary users home directory.
+* It contains secondary users home directory.
 
-/home directory me normal (non-root) users ke home directories hote hain.
+* /home directory me normal (non-root) users ke home directories hote hain.
 
- Har user ke liye yahan ek alag personal directory hoti hai jahan:
+* Har user ke liye yahan ek alag personal directory hoti hai jahan:
 
-personal files
-documents
-downloads
-user-specific configuration files
-store hote hain.
+  - personal files
+  - documents
+  - downloads
+  - user-specific configuration files
+  - store hote hain.
 
-Example
+```sh Example
 /home/ansh
 /home/user1
 /home/user2
+```
 
 
 
 
 
-14.   /tmp → Temporary Files 
+##    14. /tmp → Temporary Files 
 
-Directory that contains temporary files created by system and users .
-Files under this directory are deleted when system is rebooted.
+* Directory that contains temporary files created by system and users.
+* Files under this directory are deleted when system is rebooted.
 
-/tmp vs /var/tmp (quick recall)
+```sh /tmp vs /var/tmp (quick recall)
 
 /tmp	                                         /var/tmp
 Reboot ke baad delete               	Reboot ke baad bhi rehta
 Short-term temp files	                  Long-term temp files
+```
 
 
 
  
+
